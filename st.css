@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background:linear-gradient(90deg,#4a694a98, #d6aeae);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+  }
+  
+  .container {
+    background-color: #c27979;
+    border-radius: 10px;
+    padding: 30px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .alarm-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  #alarmTime {
+    padding: 5px;
+  }
+  
+  /* ... (existing styles) ... */
+
+.current-time {
+    height: 50px;
+    width: 150px;
+    border: 1px solid black;
+    background-color: #879cb2;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    margin-left: 10%;
+    border-radius: 10px;
+   font-family: 'Courier New', Courier, monospace;
+  }
+  
+  #currentTime {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 3%;
+    border-radius: .4rem;
+  }
+  button:hover{
+     color: gold;
+     background-color: green;
+  }
+  input{
+    padding: 4%;
+    border-radius: 9px;
+    border: #f4ddbb;
+    width: 110px;
+    min-width: 50px;  
+  }
+
+.alarm-page{
+    height: auto;
+    width: auto;
+    background-color: rgb(110, 104, 95);
+    margin: 5%;
+    border-radius: 6px;
+    
+}
+
+
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+    margin-bottom: 5px;
+    border-radius: 5px;
+     
+}
+  
+  .delete-button {
+    color: red;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    border: 1px solid black;
+    padding: 3%;
+    border-radius: .4rem;
+    background-color: skyblue;
+
+  }
+  .delete-button:hover{
+    background-color: black;
+    color: white;
+  }
+  select{
+    width: 60px;
+    margin: 4%;
+  
+  }
+#alarmTone option{
+    color: rgb(137, 255, 28);
+    border-radius: 30px;
+    background-color: #879cb2;
+      
+}
+
+
+
+@media screen and (max-width:400px) {
+  body{
+    display: block;
+    margin:20px;
+  }   
+ 
+  
+}
