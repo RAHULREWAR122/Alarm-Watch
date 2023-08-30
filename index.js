@@ -1,15 +1,19 @@
-const alarmPage=document.getElementsByClassName('.alarm-page')
 const alarmList = document.getElementById('alarmList');
 const setAlarmButton = document.getElementById('setAlarm');
 const currentTimeElement = document.getElementById('currentTime');
 const alarmToneSelect = document.getElementById('alarmTone');
 
+
+// now take value from user in watch timer input
 setAlarmButton.addEventListener('click', () => {
   const alarmTime = document.getElementById('alarmTime').value;
   if (alarmTime) {
     createAlarm(alarmTime);
   }
 });
+
+
+// craete alarm  ,take time 
 
 function createAlarm(time) {
   const alarmItem = document.createElement('li');
@@ -26,6 +30,9 @@ function createAlarm(time) {
 
   scheduleAlarm(time);
 }
+
+
+// now we  schedule the Alarm 
 
 function scheduleAlarm(alarmTime) {
   const now = new Date();
@@ -46,12 +53,16 @@ function scheduleAlarm(alarmTime) {
     playAlarmSound();
   }
 }
-
+ 
+// work on music play when time is comlecte 
+ 
 function playAlarmSound() {
   const selectedTone = alarmToneSelect.value;
   const audio = new Audio(selectedTone);
   audio.play();
 }
+
+// updating current time 
 
 function updateCurrentTime() {
   const now = new Date();
@@ -62,6 +73,7 @@ function updateCurrentTime() {
   currentTimeElement.textContent = currentTimeString;
 }
 
+// put 0 , when time < 10
 function make0(format){
     if(format <10){
         return '0'+format;
@@ -71,3 +83,4 @@ function make0(format){
 
 setInterval(updateCurrentTime, 1000);
 updateCurrentTime();
+
